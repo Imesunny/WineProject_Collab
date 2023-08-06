@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mine Wine</title>
 
-    <!-- Nunito font link part -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=PT+Mono&display=swap" rel="stylesheet">
-    <!-- font end -->
-    <script src="https://kit.fontawesome.com/618d9878ed.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
-    
-</head>
-<body>
-
-    <!-- <nav>
+function navbar(){
+    return `
+       <nav>
 
     <div id="upper_nav">
         <div id="left">
@@ -51,18 +36,6 @@
     <hr id="hr2"> 
         
 
-    </nav>  -->
-    
-    <div id="navbar_div"></div>
-
-    <!-- navbar end here -->
-
-</body>
-</html>
-<script type="module">
-
-    import navbar from "../Components/navbar.js"
-
-    document.getElementById("navbar_div").innerHTML = navbar();
-    
-</script>
+    </nav>`
+}
+export default navbar;
