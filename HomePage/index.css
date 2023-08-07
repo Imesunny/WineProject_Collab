@@ -62,3 +62,221 @@ body{
     height: 1px;
     background-color: black;   
 }
+
+/* popup css */
+  /* body {
+    overflow: hidden; /* Prevent scrolling while the popup is open */
+  /* } */ 
+
+  #blur-container {
+    filter: blur(5px); /* Apply blur to the background */
+  }
+
+  #popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure the popup appears above other content */
+  }
+
+  #popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  /* pop up end */
+
+
+  #slider_main{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  #h1tag{
+    font-size: 70px;
+  }
+
+
+ /*corosal starts here */
+ .slider {
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* Adjust the width based on the number of slides */
+  animation: slide-animation 15s infinite ;
+}
+
+.slide {
+  width: 33.33%; /* Adjust the width based on the number of slides */
+  flex-shrink: 0;
+  position: relative;
+  display: block;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Radio button styles */
+.slider-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: darkgray;
+}
+
+.slider-controls input[type="radio"] {
+  display: none;
+}
+
+.slider-controls input[type="radio"]:checked + label {
+  background-color: black;
+}
+
+/* Animation keyframes */
+@keyframes slide-animation {
+  0% { margin-left: 0; }
+  25% { margin-left: -100%; }
+  50% { margin-left: -200%; }
+  75% { margin-left: 0; }
+}
+
+ .content{
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    margin-top: -50%;
+    margin-left: 5%;
+    display: block;
+    text-align: left;
+    /* background-color:rgb(79, 77, 76)  ; */
+    padding: 20px;
+    opacity: 0.6;
+    border-radius: 10px;
+
+}
+
+ .content div h1{
+  color:#ffffff;
+  width: auto;
+    font-size:35px;
+    font-weight:bolder;
+    letter-spacing: 4px;
+    /* line-height: 5px; */
+    margin-bottom: 45px;
+    z-index: 20;
+}
+
+
+   .shopnow{
+    margin-bottom: -20%;
+    border: none;
+    color: #ffffff;
+    background: #e60f0f;
+    padding: 10px 35px;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 20;
+    
+    /* text-decoration: none; */
+}
+
+.content div p{
+  width: 90%;
+  position: relative;
+  color: white;
+  font-weight: 700;
+  z-index: 20;
+}
+/* ----------------media query----------------- */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+
+  .slide .content div h1 {
+    font-size: 3em;
+    line-height: 60px;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;
+  }
+
+
+  .slide .content div p {
+    font-size: 0.9em;
+    z-index: 20;
+  }
+
+  .slide .content div a {
+    font-size: 0.9em;
+    z-index: 20;
+  }
+}
+
+/* corosal end here */
+
+
+#container_1{
+  width: 90%;
+  margin: auto;
+}
+#container_1 > div{
+  width: 100%;
+  /* height: 500px; */
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+#wine_bottles{
+  display: flex;
+  width: 100%;
+}
+#wine_bottles > div{
+  border: 1px solid grey;
+  height: 450px;
+}
+#wine_bottles > div h3{
+  margin-top: -25px;
+}
+#wine_bottles img{
+  width: 100%;
+}
+
+
+
+

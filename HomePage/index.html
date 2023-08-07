@@ -57,6 +57,87 @@
 
     <!-- navbar end here -->
 
+    <!-- pop up starts here -->
+
+    <!-- <div id="popup">
+        <div id="popup-content">
+          <p>Are you over 18 years old?</p>
+          <button id="yes-button">Yes, I'm confirmed</button>
+          <button id="no-button">No, I'm not 18+</button>
+        </div>
+    </div> -->
+
+    <!-- popup ends here -->
+
+
+    <!-- slide carousel starts -->
+
+    <div id="slider_main">
+        <h1 id="h1tag">Wines form the best vineyards!</h1>
+
+    <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="">
+            <div class="content">
+                <div>
+                <h1>DISCOVER OUR NEW ARRIAVALS!</h1>
+                <br><button class="shopnow">Shop Now</button>
+                </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://media.istockphoto.com/id/640078294/photo/valentines-day-greeting-card.jpg?s=612x612&w=0&k=20&c=_Sd0umhkNA4IPVr_dRMltHhbRg4qiEIzI816VcBCt2U=" alt=" ">
+            <div class="content">
+             
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://stonefishinternational.com.au/wp-content/uploads/2016/03/Vineyard-Slider-Background.jpg" alt="">
+            <div class="content">
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="slider-controls">
+        <input type="radio" name="slider-radio" id="radio1" checked>
+        <label for="radio1"></label>
+        <input type="radio" name="slider-radio" id="radio2">
+        <label for="radio2"></label>
+        <input type="radio" name="slider-radio" id="radio3">
+        <label for="radio3"></label>
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- slider carousel ends -->
+    
+    <div id="container_1">
+        <h2>What would you like ?</h2>
+        <div id="wine_bottles">
+            <div><img src="../Images/product-1.png" alt="">
+                <h3>Rose</h3>
+            </div>
+            <div><img src="../Images/product-2.png" alt="">
+                <h3>Sparkling</h3>
+            </div>
+            <div><img src="../Images/product-4.png" alt="">
+                <h3>White</h3>
+            </div>
+            <div><img src="../Images/product-3.png" alt="">
+                <h3>Red</h3>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    
+
+
 </body>
 </html>
 <script type="module">
@@ -64,5 +145,26 @@
     import navbar from "../Components/navbar.js"
 
     document.getElementById("navbar_div").innerHTML = navbar();
+
+    const popup = document.getElementById("popup");
+    const blurContainer = document.getElementById("blur-container");
+    const yesButton = document.getElementById("yes-button");
+    const noButton = document.getElementById("no-button");
+
+    // Show the popup when the page loads
+    window.onload = function () {
+        popup.style.display = "flex";
+    };
+
+    // Allow user to enter the website
+    yesButton.addEventListener("click", function () {
+        popup.style.display = "none";
+        blurContainer.style.filter = "none"; // Remove blur effect
+    });
+
+    // Redirect to Google if user is not of legal age
+    noButton.addEventListener("click", function () {
+        window.location.href = "https://www.google.com";
+  });
     
 </script>
