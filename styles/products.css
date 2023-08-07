@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #FFF8E9;
+}
+/* Adjust the checkbox appearance to make it invisible */
+.wine-checkbox{
+    font-weight: bold;
+}
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Style the container and label */
+  .wine-checkbox {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .wine-checkbox label {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    color: #333;
+  }
+  
+  /* Custom checkbox styles */
+  .wine-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black; /* Black border */
+    margin-right: 8px; /* Add margin for white space */
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+  
+  /* Add the red fill in the center when the checkbox is checked */
+  .wine-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #BF0D12;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  }
+  
+  /* Make the checkbox look like a square */
+  .wine-checkbox label::before {
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  }
+  
+  /* Rotate the checkbox back to a square when checked */
+  .wine-checkbox input[type="checkbox"]:checked + label::before {
+    transform: none;
+  }
+
+  /*mine  */
+  #main{
+    width: 270px;
+    padding: 40px;
+    border: 1px solid black;
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  #wineType{
+    display: flex;
+    flex-direction: column;
+  }
+  #price{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #plus{
+    margin-left: 180px;
+    font-size: 25px;
+  }
+  .cat{
+    font-size: 18px;
+  }
+  .minus{
+    margin-left: 150px;
+    font-size: 25px;
+  }
+  #min{
+    margin-left: 170px;
+    font-size: 25px;
+  }
