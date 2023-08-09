@@ -63,7 +63,7 @@ input[type="checkbox"] {
   /*mine  */
   #main{
     display: flex;
-    
+    justify-content: space-around;
   }
   #first{
     width: 260px;
@@ -129,7 +129,7 @@ input[type="checkbox"] {
   margin-top: 10px;
 }
 .wineimg>img{
-  width: 150px;
+  width: 20%;
   height: 200px;
 }
 .priceDiv{
@@ -178,6 +178,8 @@ input[type="checkbox"] {
 }
 #pagination>button{
   margin: 10px;
+  padding: 10px;
+  border-radius: 7px;
   background-color: #BF0D12;
 color: white;
 border: 0px;
@@ -250,3 +252,152 @@ width: 50px;
   flex-direction: column;
   font-size: 25px;
 }
+#toggleFilters{
+  display: none;
+  background-color: #BF0D12;
+  border: 2px solid #BF0D12;  
+  cursor: pointer;
+  color: white;
+  margin:10px;
+margin-left: 20px;
+}
+
+@media(max-width: 1300px){
+  #wines {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+  }
+} 
+@media (max-width: 1000px){
+#toggleFilters{
+  display: block;
+  position: relative;
+  padding: 10px;
+ bottom: 30px;
+ border-radius: 8px;
+ right: 250px;
+}
+.filter-panel #first {
+  display: none;
+}
+#sort{
+  margin-right: 150px;
+}
+
+.filter-panel.active #first {
+  display: block;
+}
+
+
+#main {
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media (max-width: 768px) {
+  
+
+
+
+  /* #first {
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #wines {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+  }
+
+  .wine-checkbox label {
+    padding-left: 20px;
+  }
+
+  .priceDiv {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .cart {
+    margin-top: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .belowName {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #pagination > button {
+    margin: 5px;
+    width: 40px;
+    padding: 5px 10px;
+  }
+
+  #cata {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  #country {
+    font-size: 20px;
+  } */
+
+
+  #toggleFilters{
+    display: block;
+    position: relative;
+    padding: 10px;
+   bottom: 30px;
+   border-radius: 8px;
+   right: 30px;
+  }
+  #sort{
+    position: relative;
+    top: 60px;
+    right: 80px;
+  }
+  .filter-panel #first {
+    display: none;
+  }
+  
+  /* Show the filter panel when it's expanded */
+  .filter-panel.active #first {
+    display: block;
+  }
+
+  
+}
+
+
+@media (max-width: 639px){
+  #wines {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px;
+  }
+  #sort{
+    position: relative;
+    top: 60px;
+    right: 80px;
+  }
+}
+
+@media (max-width: 480px){
+  #sort{
+        left: 40px;
+  }
+}
+
