@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="styles/products.css">
 </head>
 <body>
+  <h1 id="cata">Catalog</h1>
+  <div id="sort">
+    <label for="sorting">Sort by:- </label>
+       <select id="sorting">
+        <option value="">FEATURED</option>
+        <option value="AtoZ">Name A to Z</option>
+        <option value="Z to A">Name Z to A</option>
+        <option value="HtoL">High to Low</option>
+        <option value="LtoH">Low to High</option>
+       </select>
+      
+  </div>
 <div id="main">
+  <div class="filter-panel">
+  <button id="toggleFilters">Toggle Filters ˅</button>
 
+<div id="first">
 <div id="filters">
     <h2>Filters</h2>
     <hr>
@@ -44,21 +59,55 @@
 <hr>
 <div class="cat"><span >Rating</span> <span id="min">-</span></div>
 <div id="star">
+  
     <div class="wine-checkbox">
-        <input type="checkbox" id="five star">
-        <label for="five-stars">★★★★★</label>
+        <input type="checkbox" id="five-stars">
+        <label for="five-stars">⭐⭐⭐⭐⭐</label>
       </div>
 
       <div class="wine-checkbox">
-        <input type="checkbox" id="four star">
-        <label for="four-stars">★★★★☆</label>
+        <input  type="checkbox" id="four-stars">
+        <label for="four-stars">⭐⭐⭐⭐</label>
       </div>
 
 
       <div class="wine-checkbox">
-        <input type="checkbox" id="three stars">
-        <label for="three-stars">★★★☆☆</label>
+        <input placeholder="i" type="checkbox" id="three-stars">
+        <label for="three-stars">⭐⭐⭐</label>
       </div>
+</div>
+<hr>
+<div class="cat"><span>Country Of Origin</span> <span id="minuss">-</span></div>
+<div id="country">
+
+  <div class="wine-checkbox">
+    <input type="checkbox" id="Italy">
+    <label for="Italy">Italy</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="California">
+    <label for="California">California</label>
+  </div>
+
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="Spain">
+    <label for="Spain">Spain</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="France">
+    <label for="France">France</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="Portugal">
+    <label for="Portugal">Portugal</label>
+  </div>
+</div>
+
+</div>
 </div>
 
     <div id="wines">
@@ -66,5 +115,7 @@
     </div>
 
 </div>
+<div id="pagination"></div>
 </body>
 </html>
+<script src="script/products.js"></script>
