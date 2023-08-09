@@ -4,13 +4,13 @@ In this project we have tried to make an Online Wine Ecommerce Website And and a
 
 Team Members:-
 
-1: Vipul Girhe
+1: Vipul Girhe:  https://github.com/heyvipul
 
-2: Gaurav Rana
+2: Gaurav Rana:  https://github.com/GauravRana12
 
-3: Saloni Goyal
+3: Saloni Goyal:  https://github.com/salonigoyal23
 
-4: Sunny Anand
+4: Sunny Anand:  https://github.com/Imesunny
 
 Role of team members:-
 
