@@ -11,7 +11,7 @@ Team Members:-
 
 Role of team members:-
 
-Vipul Girhe:- Landing Page
+Vipul Girhe:- Landing/HomePage
 
 Saloni Goyal:- Login/Signup Page
 
