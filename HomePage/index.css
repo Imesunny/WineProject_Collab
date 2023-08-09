@@ -1,9 +1,13 @@
 body{
     background-color: #FFF8E9;
     font-family:'PT Mono', monospace;
+    /* font-family: 'Nunito', sans-serif; */
     /* width: 90%;
     margin: auto; */
 }
+
+  /* navbar css */
+
 #upper_nav{
     display: flex;
     width: 90%;
@@ -11,6 +15,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 #left{
     display: flex;
     gap: 30px;
@@ -62,8 +67,36 @@ body{
     height: 1px;
     background-color: black;   
 }
+#upper_nav a{
+  text-decoration: none;
+  color: black;
+}
+@media (max-width : 500px){
+  #upper_nav > #left{
+    display: none;
+  }
+  #upper_nav > #right{
+    display: flex;
+    padding-left: 180px;
+  }
+  #nav_middle h4{
+    display: none;
+  }
+  #lower_nav div h1{
+    font-size: 20px;
+  }
+  #lower_nav div:nth-child(3){
+    display: flex;
+    align-items: center;
+  }
+  
+}
+
+
+  /* navbar css end */
 
 /* popup css */
+
   /* body {
     overflow: hidden; /* Prevent scrolling while the popup is open */
   /* } */ 
@@ -102,7 +135,11 @@ body{
   #h1tag{
     font-size: 70px;
   }
-
+  @media (max-width : 500px){
+    #h1tag{
+      font-size: 25px;
+    } 
+  }
 
  /*corosal starts here */
  .slider {
@@ -111,6 +148,7 @@ body{
   margin: auto;
   position: relative;
   overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .slides {
@@ -235,8 +273,6 @@ body{
   .slider {
     height: 200px;
   }
-
-
   .slide .content div p {
     font-size: 0.9em;
     z-index: 20;
@@ -277,6 +313,20 @@ body{
 #wine_bottles img{
   width: 100%;
 }
+@media (max-width:500px){
+  #wine_bottles div h3{
+    display:none;
+  }
+  #container_1 h2{
+    font-size: 18px;
+  }
+  #container_1 > div  div{
+    /* border: 10px solid ; */
+    height: 130px;
+  }
+
+}
+
 
 /* container 2 sets and gifts */
 #container_2{
@@ -289,6 +339,7 @@ body{
   justify-content: space-between;
   width: 100%;
 }
+
 #container_2 > div img{
   width: 420px;
   height: 300px;
@@ -309,6 +360,16 @@ body{
 #container_2 > button:hover{
   cursor: pointer;
   font-size: 15px;
+}
+#container_2 a{
+  text-decoration: none;
+  color: black;
+}
+@media (max-width:500px){
+  #container_2 > div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
 }
 
 /* container_3 */
@@ -341,11 +402,22 @@ body{
   display: flex;
   height: 500px;
 }
+@media (max-width:500px){
+  #container_3 > div:nth-child(2) img{
+    display: none;
+  }
+  #container_3{
+    justify-content: center;
+  }
+}
+
+
 #container_4{
   width: 90%;
   margin: auto;
   margin-top: 80px;
 }
+
 #container_4 >div{
   /* border: 1px solid red; */
   display: flex;
@@ -367,10 +439,129 @@ body{
   display: flex;
   gap: 30px;
 }
+@media (max-width :500px){
+  #container_4 > div {
+   display: flex;
+   flex-direction: column;
+  }
+  #container_4_2div > div{
+   display: none;
+  }
+  #container_4_2div > div img{
+   display: none;
+  }
+ }
 
+/* container_5 */
+#container_5{
+  width: 90%;
+  margin: auto;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 
+}
 
+#container_5 img{
+  width: 90%;
+}
+#container_6 > div:first-child{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+#container_6 >div:nth-child(2){
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#container_6 >div:nth-child(2) img{
+  width: 320px;
+  /* height: 250px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 100px;
+}
+@media (max-width:500px){
+  #container_5{
+    display: none;
+  }
+}
 
+/* footer part css  */
 
+#container_7{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+#container_7 a{
+  text-decoration: none;
+}
+#container_7 p{
+  font-size: 15px;
+}
+#input_email{
+  padding: 7px;
+  width: 190px;
+  background-color: #FFF8E9;
+  border: 1px solid black;
+}
+#container_7 button{
+  padding: 7px;
+  background-color: #FFF8E9;
+  border: 1px solid black;
+  font-weight: bold;
+}
+#container_7 > div .icon{
+  font-size: 25px;
+}
+#container_7 button:hover{
+  cursor: pointer;
+  color: red;
+}
+#container_7 > div a:hover, p:hover{
+  cursor: pointer;
+  color: red;
+}
+#bottom_footer{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+#bottom_footer h1{
+  font-size: 110px;
+  margin: 0;
+}
+#bottom_footer div > p{
+  font-size: 15px;
+}
+#container_7 a{
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 500px) {
+  #container_7 {
+    flex-wrap: wrap;
+  }
 
+  #container_7 > div {
+    width: 50%;
+  }
+  #bottom_footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #subscribediv{
+    display: none;
+  }
+}
+
+/* footer end */
 
