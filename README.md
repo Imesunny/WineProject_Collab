@@ -2,7 +2,7 @@
 
 In this project we have tried to make an Online Wine Ecommerce Website And and added functionally like Signup, Login, Search, Cart page, Payment Page. We used HTML, CSS, JavaScript ,Bootstrap, ES6 Tech Stacks to build this application.
 
-Team Members:-
+# Team Members:-
 
 1: Vipul Girhe:  https://github.com/heyvipul
 
@@ -12,7 +12,7 @@ Team Members:-
 
 4: Sunny Anand:  https://github.com/Imesunny
 
-Role of team members:-
+# Role of team members:-
 
 Vipul Girhe:- Landing/HomePage
 
