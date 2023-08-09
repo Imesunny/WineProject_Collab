@@ -1,120 +1,195 @@
-// Sample data for cart items
-const cartItems = [
-    {
-      id: 1,
-      name: 'Product 1',
-      price: 10.99,
-      quantity: 2,
-      imageUrl: 'path_to_image_1.jpg',
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: 19.99,
-      quantity: 1,
-      imageUrl: 'path_to_image_2.jpg',
-    },
-  ];
-  
-  // Function to render cart items dynamically
-  function renderCartItems() {
-    const cartContainer = document.getElementById('cart-items');
-    cartContainer.innerHTML = '';
-  
-    cartItems.forEach(item => {
-      const cartItemDiv = document.createElement('div');
-      cartItemDiv.className = 'cart-item';
-  
-      // Create and append the image tag
-      const img = document.createElement('img');
-      img.src = item.imageUrl;
-      cartItemDiv.appendChild(img);
-  
-      // Create and append the div for item details
-      const detailsDiv = document.createElement('div');
-      detailsDiv.className = 'cart-item-details';
-  
-      // Create and append the <p> tag for the item name
-      const itemName = document.createElement('p');
-      itemName.innerText = item.name;
-      detailsDiv.appendChild(itemName);
-  
-      // Create and append the <p> tag for the item price
-      const itemPrice = document.createElement('p');
-      itemPrice.innerText = `$${item.price}`;
-      detailsDiv.appendChild(itemPrice);
-  
-      cartItemDiv.appendChild(detailsDiv);
-  
-      // Create and append the quantity div
-      const quantityDiv = document.createElement('div');
-      quantityDiv.className = 'quantity-container';
-  
-      // Create and append the + button
-      const plusBtn = document.createElement('div');
-      plusBtn.className = 'quantity-btn';
-      plusBtn.innerText = '+';
-      plusBtn.addEventListener('click', () => {
-        // Increase quantity
-        item.quantity += 1;
-        renderCartItems();
-      });
-      quantityDiv.appendChild(plusBtn);
-  
-      // Create and append the quantity display
-      const quantityDisplay = document.createElement('div');
-      quantityDisplay.innerText = `${item.quantity}`;
-      quantityDiv.appendChild(quantityDisplay);
-  
-      // Create and append the - button
-      const minusBtn = document.createElement('div');
-      minusBtn.className = 'quantity-btn';
-      minusBtn.innerText = '-';
-      minusBtn.addEventListener('click', () => {
-        // Decrease quantity, but not below 1
-        item.quantity = Math.max(1, item.quantity - 1);
-        renderCartItems();
-      });
-      quantityDiv.appendChild(minusBtn);
-  
-      cartItemDiv.appendChild(quantityDiv);
-  
-      // Create and append the remove-total div
-      const removeTotalDiv = document.createElement('div');
-      removeTotalDiv.className = 'remove-total';
-  
-      // Create and append the remove button (again) for removeTotal
-      const removeTotalBtn = document.createElement('div');
-      removeTotalBtn.className = 'remove-btn';
-      removeTotalBtn.innerText = 'Remove';
-      removeTotalBtn.addEventListener('click', () => {
-        // Remove the item from the cart
-        const index = cartItems.indexOf(item);
-        if (index !== -1) {
-          cartItems.splice(index, 1);
-          renderCartItems();
-        }
-      });
-      removeTotalDiv.appendChild(removeTotalBtn);
-  
-      // Create and append the price * quantity <p> tag
-      const itemTotalPrice = document.createElement('p');
-      itemTotalPrice.innerText = `$${(item.price * item.quantity).toFixed(2)}`;
-      removeTotalDiv.appendChild(itemTotalPrice);
-  
-      cartItemDiv.appendChild(removeTotalDiv);
-  
-      cartContainer.appendChild(cartItemDiv);
-    });
-  
-    // Calculate and display the total price of the cart
-    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-    const totalDiv = document.createElement('div');
-    totalDiv.className = 'total';
-    totalDiv.innerText = `Total Price: $${totalPrice.toFixed(2)}`;
-    cartContainer.appendChild(totalDiv);
+var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+var cartPage = document.querySelector(".cart-page");
+
+function updateLocalStorage() {
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+}
+
+function removeCartItem(cartItem) {
+  var index = cartItems.findIndex(function(item) {
+      return item.name === cartItem.querySelector(".cart-item-details p:first-child").textContent;
+  });
+
+  if (index !== -1) {
+      cartItems.splice(index, 1);
+      updateLocalStorage();
   }
-  
-  // Initial rendering of cart items
-  renderCartItems();
-  
+}
+
+// Loop through each item in cart
+cartItems.forEach(function(item) {
+    var cartItem = document.createElement("div");
+    cartItem.className = "cart-item";
+
+    var img = document.createElement("img");
+    img.src = item.img_url;
+    cartItem.appendChild(img);
+
+    var details = document.createElement("div");
+    details.className = "cart-item-details";
+
+    var productName = document.createElement("p");
+    productName.textContent = item.name;
+    details.appendChild(productName);
+
+    var productPrice = document.createElement("p");
+    productPrice.textContent = "Price: $" + item.price;
+    details.appendChild(productPrice);
+
+    cartItem.appendChild(details);
+
+    var quantityDiv = document.createElement("div");
+    quantityDiv.className = "cart-quantity";
+
+    var decreaseButton = document.createElement("button");
+    decreaseButton.textContent = "-";
+    decreaseButton.addEventListener("click", function() {
+        if (quantityInput.value > 1) {
+            quantityInput.value--;
+            updateTotalPrice();
+        }
+    });
+
+    var quantityInput = document.createElement("input");
+    quantityInput.type = "number";
+    quantityInput.value = 1;
+    quantityInput.addEventListener("change", function() {
+        if (quantityInput.value < 1) {
+            quantityInput.value = 1;
+        }
+        updateTotalPrice();
+    });
+
+    var increaseButton = document.createElement("button");
+    increaseButton.textContent = "+";
+    increaseButton.addEventListener("click", function() {
+        quantityInput.value++;
+        updateTotalPrice();
+    });
+
+    quantityDiv.appendChild(decreaseButton);
+    quantityDiv.appendChild(quantityInput);
+    quantityDiv.appendChild(increaseButton);
+    cartItem.appendChild(quantityDiv);
+
+    var deleteDiv = document.createElement("div");
+    deleteDiv.className = "cart-delete";
+
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", function() {
+        cartPage.removeChild(cartItem);
+        removeCartItem(cartItem);
+        updateTotalPrice();
+    });
+
+    var totalPrice = document.createElement("p");
+    totalPrice.textContent = "Total: $" + item.price;
+    totalPrice.className = "total-price";
+
+    deleteDiv.appendChild(totalPrice);
+    deleteDiv.appendChild(deleteButton);
+    cartItem.appendChild(deleteDiv);
+
+    cartPage.appendChild(cartItem);
+});
+
+var parentContainer = document.createElement("div");
+parentContainer.className = "parent-container";
+
+var ageContainer = document.createElement("div");
+ageContainer.className = "cart-age-container";
+
+var ageToggle = document.createElement("input");
+ageToggle.type = "checkbox";
+ageToggle.id = "age-toggle";
+
+var ageText = document.createElement("p");
+ageText.className = "cart-age-text";
+ageText.textContent = "I'm 18+";
+
+var ageInfo = document.createElement("p");
+ageInfo.className = "age-info";
+ageInfo.style.marginLeft = "10px";
+ageInfo.style.display = "inline";
+
+ageToggle.addEventListener("change", function() {
+    ageInfo.textContent = ageToggle.checked ? "An adult signature 18+ is required for delivery" : "Not allowed";
+});
+
+var rightAlignedContainer = document.createElement("div");
+rightAlignedContainer.className = "right-aligned-container";
+
+var slashedPrice = document.createElement("div");
+slashedPrice.className = "slashed-price";
+var originalPriceSpan = document.createElement("span");
+originalPriceSpan.textContent = "$" + calculateSubtotal().toFixed(2);
+originalPriceSpan.style.textDecoration = "line-through"; 
+slashedPrice.appendChild(document.createTextNode("Slashed Price: "));
+slashedPrice.appendChild(originalPriceSpan);
+
+rightAlignedContainer.appendChild(slashedPrice);
+
+var actualSubtotal = document.createElement("div");
+actualSubtotal.className = "actual-subtotal";
+rightAlignedContainer.appendChild(actualSubtotal);
+
+var savedAmount = document.createElement("p");
+savedAmount.textContent = "You saved $1000";
+rightAlignedContainer.appendChild(savedAmount);
+
+ageContainer.appendChild(ageText);
+ageContainer.appendChild(ageToggle);
+ageContainer.appendChild(ageInfo);
+
+parentContainer.appendChild(ageContainer);
+parentContainer.appendChild(rightAlignedContainer);
+
+var cartSummary = document.createElement("div");
+cartSummary.className = "cart-summary";
+
+var totalItemsElement = document.createElement("h3");
+totalItemsElement.textContent = "SubTotal: " + cartItems.length;
+totalItemsElement.style.color = "red";
+cartSummary.appendChild(totalItemsElement);
+
+var checkoutButton = document.createElement("button");
+checkoutButton.textContent = "Checkout";
+checkoutButton.style.backgroundColor = "red";
+checkoutButton.style.color = "white";
+
+cartPage.appendChild(parentContainer);
+cartPage.appendChild(cartSummary);
+cartPage.appendChild(checkoutButton);
+
+function calculateSubtotal() {
+    var total = 0;
+    cartItems.forEach(function(item) {
+        total += parseFloat(item.price); 
+    });
+    return total;
+}
+
+function updateTotalPrice() {
+  var actualTotal = calculateSubtotal(); 
+
+  var totalPrices = document.querySelectorAll(".total-price");
+  totalPrices.forEach(function(totalPriceElement) {
+      var cartItem = totalPriceElement.closest(".cart-item");
+      var quantityInput = cartItem.querySelector("input");
+      var itemPrice = parseFloat(cartItem.querySelector(".cart-item-details p:last-child").textContent.replace("Price: $", ""));
+      totalPriceElement.textContent = "Total: $" + (itemPrice * quantityInput.value).toFixed(2);
+
+      actualTotal += itemPrice * quantityInput.value; 
+  });
+
+  totalItemsElement.textContent = `SubTotal: (${cartItems.length} items)`;
+
+  actualSubtotal.textContent = "Actual Subtotal $" + actualTotal.toFixed(2); 
+  slashedPrice.innerHTML = `Discounted Price: <span class="original-price">$${(actualTotal + 1000).toFixed(2)}</span>`;
+}
+// Initial update
+updateTotalPrice();
+
+

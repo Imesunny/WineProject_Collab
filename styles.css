@@ -1,47 +1,147 @@
 .cart-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .cart-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
-  
-  .cart-item-details {
-    flex: 1;
-  }
-  
-  .cart-item p {
-    margin: 0;
-  }
-  
-  .cart-item .quantity-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cart-item .quantity-btn {
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .cart-item .remove-btn {
-    cursor: pointer;
-  }
-  
-  .total {
-    text-align: right;
-    padding: 10px;
-  }
-  
-  .remove-total {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px;
-  }
-  
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.cart-item img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.cart-quantity input {
+  width: 40px;
+  text-align: center;
+}
+
+.cart-delete {
+  text-align: center;
+}
+
+.checkout-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.cart-age-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style for the "I'm 18+" text */
+.cart-age-text {
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+
+}
+
+
+/* Style for the toggle button */
+#age-toggle {
+  transform: scale(1.5); /* Increase the size of the toggle */
+  margin-right: 10px;
+}
+
+/* Style for the age info text */
+.age-info {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Style for the summary container */
+.summary-container {
+  text-align: right;
+}
+
+/* Style for the original price inside the slashed-price */
+.original-price {
+  text-decoration: line-through;
+  color: #999; /* Or any color you prefer */
+}
+
+.right-aligned-container {
+  text-align: right;
+}
+
+/* Apply strikethrough style to the original price */
+.original-price {
+  text-decoration: line-through;
+  color: #999; /* Or any color you prefer */
+}
+
+.parent-container {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cart-age-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color : hsl(41,100%,96%)rgb(255,248,233);
+  /* border: 2px solid red; */
+}
+
+h1, h2, h3 {
+  font-family: 'Nunito', sans-serif;
+}
+
+p {
+  font-family: 'PT Mono', monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.cart-page {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
