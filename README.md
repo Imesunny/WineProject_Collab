@@ -1,4 +1,7 @@
 # WineMine Ecommerce-Application
+
+In this project we have tried to make an Online Wine Ecommerce Website And and added functionally like Signup, Login, Search, Cart page, Payment Page. We used HTML, CSS, JavaScript ,Bootstrap, ES6 Tech Stacks.
+
 Team Members:-
 
 1: Vipul Girhe
