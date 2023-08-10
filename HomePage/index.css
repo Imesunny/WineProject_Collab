@@ -579,6 +579,10 @@ body{
 /* footer end */
 
 /* search functionality */
+.wrapper {
+  /* Other styling properties */
+  position: relative; /* Keep the wrapper positioned relatively */
+}
 
 .wrapper .search-input{
   /* background: #fff; */
@@ -594,6 +598,10 @@ body{
   margin-left: -10px;
   opacity: 1;
   pointer-events: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
 }
 
 .autocom-box li{
@@ -603,6 +611,9 @@ body{
   width: 100%;
   cursor: default;
   border-radius: 3px;
+  margin-top: 4px;
+  /* border: 1px solid black; */
+  color: red;
 }
 
 .search-input.active .autocom-box li{
