@@ -1,14 +1,17 @@
 let suggestions = [
     "Red wine",
-    "White wine",
     "Black wine",
     "Sparkling wine",
     "Rose wine",
     "Dessert wine",
-    "Weingut",,
+    "Weingut",
+    "Wein",
     "Weissburgunder",
     "Brunello",
     "Cabernet Sauvignon",
-
+    "Regent",
+    "Rheingau",
+    "Rheinhessen",
+    "Rivaner (Müller Thurgau)"
 
 ];

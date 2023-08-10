@@ -48,11 +48,8 @@ inputBox.onkeyup = (e) => {
 function select(element) {
     let selectData = element.textContent;
     inputBox.value = selectData;
-    icon.onclick = () => {
-        webLink = `https://www.google.com/search?q=${selectData}`;
-        linkTag.setAttribute("href", webLink);
-        linkTag.click();
-    };
+    // Redirect to product.html page with selected data
+    window.location.href = `product.html?search=${encodeURIComponent(selectData)}`;
     searchWrapper.classList.remove("active");
 }
 
