@@ -51,7 +51,7 @@ function footer(){
     </div>
     <hr>
     <div id="bottom_footer">
-        <h1>Mine Vine</h1>
+        <h1>Mine Wine</h1>
         <div>
             <p>We only sell Alcohol to Adults 21+</p>
             <p>@MineVine 2023. All Rights Reserved</p>
