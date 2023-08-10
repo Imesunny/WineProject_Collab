@@ -5,21 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>About us</title>
         
 </head>
 <body>
+    <div id="explorenavbar"></div>
     <h2 class="heading">About Us</h2>
     <p class="heading1">Let's get acquainted!</p>
-    <div class="display">
-        <p id="content">We are a group of wine enthusiasts who love everything about wine, from the vineyards to the bottle. Our passion for wine has taken us to different parts of the world, exploring different wineries and discovering unique flavors. We are not just wine sellers, we are wine lovers, and our mission is to help you discover and appreciate the beauty of wine. We believe that everyone can find their perfect bottle, whether you are a wine connoisseur or a novice. Our knowledgeable staff is always available to guide you in selecting the perfect wine for any occasion</p>
-        <img id="firstImg"src="https://www.thetopvillas.com/blog/wp-content/uploads/2018/07/wine-featured.jpg" alt="">
+    <div>
+        <div class="display" >
+            <img id="firstImg"src="https://www.thetopvillas.com/blog/wp-content/uploads/2018/07/wine-featured.jpg" alt="">
+            <p id="content">We are a group of wine enthusiasts who love everything about wine, from the vineyards to the bottle. Our passion for wine has taken us to different parts of the world, exploring different wineries and discovering unique flavors. We are not just wine sellers, we are wine lovers, and our mission is to help you discover and appreciate the beauty of wine. We believe that everyone can find their perfect bottle, whether you are a wine connoisseur or a novice. Our knowledgeable staff is always available to guide you in selecting the perfect wine for any occasion</p>
+        </div>
         <br>
-        <p id="content">Our online store offers a wide selection of wines, from rare and vintage bottles to everyday favorites. We work directly with wineries and distributors to ensure tha inventory is always up-to-date and that we are offering the best selection of win competitive prices.</p>
-        <img id="secondImg"src="https://i0.wp.com/blueridgemountainstravelguide.com/wp-content/uploads/2022/02/Wineries-in-North-Georgia-1.jpg?fit=1280%2C628&ssl=1" alt="">
-        <br>
-        <p id="content">The MineWine family own five wine estates in Bordeaux as well as the De Mour négociant firm. This firm prides itself on its values, based on human expertise passed down through generations, mastery of all stages in the winemaking process, and upmarket product ranges developed via exclusive partnerships.</p>
+        <div class="display">
+            <p id="content">Our online store offers a wide selection of wines, from rare and vintage bottles to everyday favorites. We work directly with wineries and distributors to ensure tha inventory is always up-to-date and that we are offering the best selection of win competitive prices. The MineWine family own five wine estates in Bordeaux as well as the De Mour négociant firm. This firm prides itself on its values, based on human expertise passed down through generations, mastery of all stages in the winemaking process, and upmarket product ranges developed via exclusive partnerships.</p>
+            <img id="secondImg"src="https://i0.wp.com/blueridgemountainstravelguide.com/wp-content/uploads/2022/02/Wineries-in-North-Georgia-1.jpg?fit=1280%2C628&ssl=1" alt="">
+        </div>
+        <div>
+            <p id="content"> At MineWine, we pride ourselves on curating an exquisite collection of wines from around the world, offering you a journey through the captivating realm of flavors and aromas. With a passion for oenology and a dedication to providing exceptional customer experiences, our wine shop has become a haven for enthusiasts and novices alike.
+
+                Our team of knowledgeable sommeliers and wine aficionados is committed to helping you discover the perfect bottle to complement any occasion. Whether you're seeking a rich red to savor by the fireplace, a crisp white for a sunny afternoon, or a sparkling gem to celebrate life's milestones, our carefully curated selection ensures you'll find just what you're looking for.
+                
+                But we're more than just a wine shop; we're a destination where exploration and education intertwine. We host regular wine tastings, workshops, and events designed to elevate your wine appreciation journey. Our aim is to demystify the world of wine, making it accessible and enjoyable for all.
+                
+                Step into our inviting space and let your senses be enchanted by the symphony of flavors that our wines offer. Whether you're seeking a personal indulgence or a thoughtful gift, MineWine is your trusted source for exceptional wines and an unparalleled experience. Join us in celebrating the artistry of winemaking and the joy of sharing moments, one sip at a time.</p>
+            <img id="thirdImg"src="https://abkhazworld.com/aw/images/img/Wines_of_Abkhazia.jpg" alt="">
+        </div>
     </div>
     
 </body>
 </html>
+<script type="module">
+    import navbar from "./scripts/navbar.js"
+    let navbar_container = document.getElementById("explorenavbar");
+    navbar_container.innerHTML = navbar();
+</script>
