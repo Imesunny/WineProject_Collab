@@ -58,5 +58,95 @@
 	</div>
 </div>
 </body>
-<script src="./Scripts/Login.js"></script>
 </html>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+	const firebaseConfig = {
+		apiKey: "AIzaSyC-e_Np_4JSEfZJZLgx99FtBBY0AuAA1Dw",
+		authDomain: "minewine-8ffdb.firebaseapp.com",
+		databaseURL: "https://minewine-8ffdb-default-rtdb.firebaseio.com",
+		projectId: "minewine-8ffdb",
+		storageBucket: "minewine-8ffdb.appspot.com",
+		messagingSenderId: "156422078699",
+		appId: "1:156422078699:web:7d65d93a33080356373eae"
+	};
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase();
+	const auth = getAuth();
+	console.log(app);
+
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+
+	// Signup
+	var signupForm = document.querySelector("#container .sign-up-container form");
+	signupForm.addEventListener("submit", function(event) {
+	event.preventDefault();
+
+	var name = signupForm.querySelector("#signup-name").value;
+	var email = signupForm.querySelector("#signup-email").value;
+	var password = signupForm.querySelector("#signup-org").value;
+
+	let userId = Math.round(Math.random() * 10);
+	createUserWithEmailAndPassword(auth, email, password)
+	.then((userCredential) => {
+		const user = userCredential.user;
+		set(ref(database, "users/" + userId), {
+			username: name,
+			email: email,
+		});
+	})
+	.catch((error) => {
+		const errorCode = error.code;
+		const errorMessage = error.message;
+		console.log(errorMessage);
+	});
+	container.classList.remove("right-panel-active");
+
+
+	var welcomeMessage = document.querySelector("#container .sign-in-container h1");
+	welcomeMessage.textContent = "Welcome to MineWine Online Store, " + name + "!";
+	});
+
+	// Login
+	var loginForm = document.querySelector("#container .sign-in-container form");
+	loginForm.addEventListener("submit", function(event) {
+		event.preventDefault();
+		var email = loginForm.querySelector("#login-email").value;
+		var password = loginForm.querySelector("#login-password").value;
+		let userId = localStorage.getItem("userId");
+
+		signInWithEmailAndPassword(auth, email, password)
+		.then((userCredential) => {
+			const user = userCredential.user;
+			const starCountRef = ref(database, "users/");
+			onValue(starCountRef, (snapshot) => {
+				const data = snapshot.val();
+				for (var key in data) {
+					if(data[key]['email'] == email) {
+						localStorage.setItem("userInfo", JSON.stringify(data[key]));
+						window.location.href = "index.html";
+					}
+				}
+			});
+		})
+		.catch((error) => {
+			const errorCode = error.code;
+			const errorMessage = error.message;
+			alert("Invalid email or password");
+		});
+	});
+
+</script>
+<script src="./scripts/login.js"></script>

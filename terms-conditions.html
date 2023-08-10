@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/terms&conditions.css" />
+    <link rel="stylesheet" href="./Styles/terms-conditions.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Terms and Conditions</title>
 </head>
 <body>
+    <div id="explorenavbar"></div>
     <h1 id="heading">MineWine Shop</h1>
     <br>
     <h1 id="heading"> Terms and Conditions</h1>
@@ -30,13 +32,13 @@
     <p>Please refer to Our Shipping Policy for specific information about the shipment and delivery of your order. In the case of inclement weather or unforeseen delivery complications, it may be necessary to make adjustments to your delivery schedule and We may delay delivery to avoid extremely hot or cold weather that may damage your purchase. If there will be a significant delay, a customer service representative or representative from the Licensed Entity or common carrier may call or email you to let you know the status of your delivery. We will deliver your order as quickly as possible when the conditions permit. If the delivery address you designate is located in an area that does not permit the delivery of alcoholic beverages to a consumer, We will ask you to provide an alternate, permissible delivery address. All shipments are delivered by a certified courier service and require the signature of an adult over the age of 21 with valid photo ID at the time of delivery. By signing for the package, the recipient is certifying they are at least 21 years of age. Any misrepresentation to the courier is unlawful, and any violation will be prosecuted to the fullest extent of the law. Please note that shipments will not be left at your door without a valid signature at time of delivery, and We are not able to ship to a post office box. If no authorized adult is available during the day to sign for delivery after multiple unsuccessful delivery attempts have been made, your shipment will be returned to Us as undeliverable. Shipping fees are non-refundable, and a $12 restocking fee may apply to shipments that are returned to Us. Therefore, We recommend the use of a business address to ensure prompt delivery if you know you won’t be at home to receive the delivery.  All orders placed pursuant to these Terms and Conditions are shipped by Licensed Entities. Title to Products shipped, and the risk of loss, passes from the applicable Licensed Entity to you upon the shipment of your order by the applicable Licensed Entity. The terms and cost of shipment may vary from order to order. You will be notified at the time of purchase as to the applicable shipping charges (if any) and taxes, which you will be responsible for paying. The Licensed Entities We work with do not ship to states, counties or cities where shipping wine is prohibited by law. The remittance of any and all federal, state, sales, use and excise taxes to the applicable state authority will be made by the applicable Licensed Entity related to such wine orders. Product availability and limitations on orders vary by state.</p>
     <h2>DISCLAIMER: NO WARRANTY</h2>
     <p>We make no representations or warranties as to the accuracy of the Content. We are not liable for omissions or typographical errors contained in the Content. You acknowledge that any reliance upon any Content shall be at your own risk. If a party for whom Content has been published discovers an error or omission in the Content, it is that party’s obligation to notify We of the error or omission; however, We does not warrant that such error or omission will be corrected.
-
         All transactions made based on information from the Services are solely between you and the Vendor. Your sole rights and remedies shall be against the Vendor. By using the Services, you acknowledge and agree that We has no liability for any cost, damage, or harm, directly or indirectly, in connection with the delivery, failure to deliver, performance, quality, or any other aspect of any products or services ordered or attempted to be ordered via information from the Services.
-        
         ALTHOUGH WE ENDEAVORS TO PROVIDE CURRENT, ACCURATE AND RELIABLE INFORMATION ON THE We SITE, IT DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE EVENTS OR THE ACCURACY, RELIABILITY OR ANY USE OF INFORMATION ON THE We SITE. We DOES NOT WARRANT THAT YOUR USE OF THE We SITE, OR THE OPERATION OR FUNCTION OF THE We SITE, ANY COMPONENT THEREOF, OR ANY PRODUCTS, SOFTWARE OR SERVICES OFFERED IN CONNECTION THEREWITH, WILL BE UNINTERRUPTED OR ERROR FREE; OR THAT DEFECTS THEREWITH WILL BE CORRECTED; OR THAT THIS SITE OR ITS SERVER IS FREE OF VIRUSES OR OTHER HARMFUL ELEMENTS.
-        
-        YOUR USE OF THE WE SITE IS AT YOUR OWN RISK AND YOU ASSUME FULL RESPONSIBILITY FOR ALL COSTS ASSOCIATED WITH ALL NECESSARY SERVICING OR REPAIR OF ANY EQUIPMENT YOU USE IN CONNECTION WITH YOUR USE OF THE WEBSITE. We AND ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE We SITE. THE We SITE CONTENT PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT ANY EXPRESS, IMPLIED OR STATUTORY WARRANTY OF ANY KIND INCLUDING WARRANTIES OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT OF THIRD PARTY RIGHTS, OR FITNESS FOR ANY PARTICULAR PURPOSE.</p>
+        YOUR USE OF THE WE SITE IS AT YOUR OWN RISK AND YOU ASSUME FULL RESPONSIBILITY FOR ALL COSTS ASSOCIATED WITH ALL NECESSARY SERVICING OR REPAIR OF ANY EQUIPMENT YOU USE IN CONNECTION WITH YOUR USE OF THE WEBSITE. We AND ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE We SITE. THE We SITE CONTENT PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT ANY EXPRESS, IMPLIED OR STATUTORY WARRANTY OF ANY KIND INCLUDING WARRANTIES OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT OF THIRD PARTY RIGHTS, OR FITNESS FOR ANY PARTICULAR PURPOSE.
+    </p>
 </html>
-<script>
-
+<script type="module">
+    import navbar from "./scripts/navbar.js"
+    let navbar_container = document.getElementById("explorenavbar");
+    navbar_container.innerHTML = navbar();
 </script>
