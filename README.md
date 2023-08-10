@@ -16,7 +16,7 @@ In this project we have tried to make an Online Wine Ecommerce Website And and a
 
 Vipul Girhe:- Landing/HomePage
 
-Saloni Goyal:- Login/Signup Page
+Saloni Goyal:- Login/Signup Page, responsiveness of product description page
 
 Gaurav Rana:- Product Page/Product description Page
  
