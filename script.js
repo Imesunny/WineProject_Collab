@@ -115,7 +115,7 @@ ageInfo.style.marginLeft = "10px";
 ageInfo.style.display = "inline";
 
 ageToggle.addEventListener("change", function() {
-    ageInfo.textContent = ageToggle.checked ? "An adult signature 18+ is required for delivery" : "Not allowed";
+    ageInfo.textContent = ageToggle.checked ? "An adult signature (18+) is required for delivery" : "Not allowed";
 });
 
 var rightAlignedContainer = document.createElement("div");
@@ -151,12 +151,13 @@ cartSummary.className = "cart-summary";
 
 var totalItemsElement = document.createElement("h3");
 totalItemsElement.textContent = "SubTotal: " + cartItems.length;
-totalItemsElement.style.color = "red";
+totalItemsElement.style.color = "#bf0d12";
 cartSummary.appendChild(totalItemsElement);
 
 var checkoutButton = document.createElement("button");
+checkoutButton.setAttribute("class", "checkoutButton");
 checkoutButton.textContent = "Checkout";
-checkoutButton.style.backgroundColor = "red";
+checkoutButton.style.backgroundColor = "#bf0d12";
 checkoutButton.style.color = "white";
 
 cartPage.appendChild(parentContainer);
