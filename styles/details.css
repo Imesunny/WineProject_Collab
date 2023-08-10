@@ -195,3 +195,126 @@ body{
     margin: auto;
     width: 90%;
 }
+@media screen and (max-width: 480px) {
+    .imgDiv>img {
+        margin-left: 106px;
+    }
+    .bname {
+        font-size: 24px;
+    }
+    .imgDiv {
+        width: 100%;;
+    }
+    #cont{
+        flex-direction: column;
+        height: auto;
+    }
+    .smallImg {
+        display: flex;
+        justify-content: space-between;
+    }
+    .smallImg img {
+        width: 20%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    #side {
+        width: 100%;;
+    }
+    .detilsDiv {
+        margin: 0px 10px 10px 10px;
+    }
+    .moreDetails {
+        margin: 0px 10px 10px 10px;
+    }
+    #button1 {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 480px) {
+        .imgDiv>img {
+            margin-left: 106px;
+        }
+        .bname {
+            font-size: 24px;
+        }
+        .imgDiv {
+            width: 100%;;
+        }
+        #cont{
+            flex-direction: column;
+            height: auto;
+        }
+        .smallImg {
+            display: flex;
+            justify-content: space-between;
+        }
+        .smallImg img {
+            width: 20%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        #side {
+            width: 100%;;
+        }
+        .detilsDiv {
+            margin: 0px 10px 10px 10px;
+        }
+        .moreDetails {
+            margin: 0px 10px 10px 10px;
+        }
+        #button1 {
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }@media screen and (max-width: 480px) {
+        .imgDiv>img {
+            margin-left: 137px;
+        }
+        .bname {
+            font-size: 24px;
+        }
+        .imgDiv {
+            width: 100%;;
+        }
+        #cont{
+            flex-direction: column;
+            height: auto;
+        }
+        .smallImg {
+            display: flex;
+            justify-content: space-between;
+        }
+        .smallImg img {
+            width: 20%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        #side {
+            width: 100%;;
+        }
+        .detilsDiv {
+            margin: 0px 10px 10px 10px;
+        }
+        .moreDetails {
+            margin: 0px 10px 10px 10px;
+        }
+        #button1 {
+            margin-left: 50px;
+            margin-right: 0;
+        }
+        .Divdiv>div{
+            display: grid;
+            margin: 0px 10px 0px 18px;
+        }
+        .rate {
+            width: 95%;
+        }
+        .review {
+            width: 95%;
+        }
+    }
+}
