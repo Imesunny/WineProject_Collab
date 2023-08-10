@@ -3,18 +3,18 @@ var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 var cartPage = document.querySelector(".cart-page");
 
 function updateLocalStorage() {
-  localStorage.setItem("cart", JSON.stringify(cartItems));
+    localStorage.setItem("cart", JSON.stringify(cartItems));
 }
 
 function removeCartItem(cartItem) {
-  var index = cartItems.findIndex(function(item) {
-      return item.name === cartItem.querySelector(".cart-item-details p:first-child").textContent;
-  });
+    var index = cartItems.findIndex(function(item) {
+        return item.name === cartItem.querySelector(".cart-item-details p:first-child").textContent;
+    });
 
-  if (index !== -1) {
-      cartItems.splice(index, 1);
-      updateLocalStorage();
-  }
+    if (index !== -1) {
+        cartItems.splice(index, 1);
+        updateLocalStorage();
+    }
 }
 
 // Loop through each item in cart
@@ -24,6 +24,8 @@ cartItems.forEach(function(item) {
 
     var img = document.createElement("img");
     img.src = item.img_url;
+    img.height = 70; 
+    img.width = 60;  
     cartItem.appendChild(img);
 
     var details = document.createElement("div");
