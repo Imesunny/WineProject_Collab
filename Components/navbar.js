@@ -30,6 +30,7 @@ function navbar(){
         </div>
         <div>
             <i class="fa-solid fa-magnifying-glass"></i>
+            
             <input id="search" type="text" placeholder="START TYPING TO SEARCH ...">
         </div>
 

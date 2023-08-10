@@ -119,10 +119,23 @@ body{
   }
 
   #popup-content {
-    background-color: white;
+    background-color: #FFF8E9;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+  }
+  #popup-content button{
+    font-family: 'Nunito', sans-serif; 
+    font-weight: bold;
+    background-color: #FFF8E9;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 10px;
+  }
+  #popup-content button:hover{
+     cursor: pointer;
+     color: green;
+     font-size: 14px;
   }
   /* pop up end */
 
@@ -564,4 +577,36 @@ body{
 }
 
 /* footer end */
+
+/* search functionality */
+
+.wrapper .search-input{
+  /* background: #fff; */
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  margin-top: -15px;
+  /* box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12); */
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  margin-left: -10px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+
 
