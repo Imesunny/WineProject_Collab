@@ -63,3 +63,18 @@ function showSuggestions(list) {
     }
     suggBox.innerHTML = listData;
 }
+
+//
+    const menuButton = document.getElementById("menuButton");
+    const menuContent = document.getElementById("menuContent");
+
+    menuButton.addEventListener("click", () => {
+        menuContent.style.display = menuContent.style.display === "block" ? "none" : "block";
+    });
+
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (event) => {
+        if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+            menuContent.style.display = "none";
+        }
+    });

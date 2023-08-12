@@ -38,8 +38,9 @@
             <div><h1>Mine Wine</h1></div>
             
             <div id="nav_middle" >
-                <h4>RED</h4>
-                <h4>WHITE</h4>
+                <h4><a href="product.html">WINES</a></h4>
+                <h4><a href="#">RED</a></h4>
+                <h4><a href="#"></a>WHITE</h4>
                 <h4>ROSE</h4>
                 <h4>SPARKLING</h4>
                 <h4>PROMOTIONS</h4>
@@ -61,10 +62,23 @@
                 </div>
             </div>
     
+        </div> 
+        <hr id="hr2">
+       
+        <div class="menu">
+            <button class="menu-button" id="menuButton">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </button>
+            <div class="menu-content" id="menuContent">
+                <a href="product.html">Red wine</a>
+                <a href="product.html">White wine</a>
+                <a href="#">Rose wine</a>
+                <a href="#">Sparkling</a>
+            </div>
         </div>
-        <hr id="hr2"> 
-            
-    
+
         </nav>
     
     <!-- navbar imported here -->
@@ -76,13 +90,13 @@
 
     <!-- pop up starts here -->
 
-    <div id="popup">
+    <!-- <div id="popup">
         <div id="popup-content">
           <p>Are you over 18 years old?</p>
           <button id="yes-button">Yes, I'm confirmed!</button>
           <button id="no-button">No, I'm not 18+</button>
         </div>
-    </div>
+    </div> -->
 
     <!-- popup ends here -->
 
@@ -355,11 +369,5 @@
     noButton.addEventListener("click", function () {
         window.location.href = "https://www.google.com";
   });
-
-  document.getElementById("subscribe_btn").addEventListener("click",thanks);
-
-  function thanks(){
-    console.log("hi")
-  }
-    
+ 
 </script>
