@@ -18,7 +18,7 @@ body{background: repeating-linear-gradient(90deg, #d5d1c7,#fff8e9 10px, #fff8e9 
 }
 #thirdImg{
     width:1250px;
-    height:300px;
+    height:360px;
     background-position:center;
     overflow:hidden;
     margin-left: 50px;
@@ -43,4 +43,10 @@ body{background: repeating-linear-gradient(90deg, #d5d1c7,#fff8e9 10px, #fff8e9 
     display:grid;
     grid-template-columns: repeat(2,1fr);
     flex:column;
+}
+@media screen and (max-width: 480px) {
+    .display {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
 }

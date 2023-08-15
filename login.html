@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>My account</title>
     <link rel="stylesheet" href="./Styles/Login.css" />
 </head>
@@ -24,6 +26,16 @@
 			<input type="password" placeholder="Password" id="signup-org" />
 			<button>Sign Up</button>
 		</form>
+		<div id="gConnect">
+			<button class="g-signin"
+				data-clientid=" %%% YOUR CLIENT ID HERE %%% "
+				data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/contacts.readonly"
+				data-requestvisibleactions="http://schemas.google.com/AddActivity"
+				data-callback="_onSignInCallback"
+				data-theme="dark"
+				data-cookiepolicy="single_host_origin">
+			</button>
+		</div>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
@@ -51,7 +63,7 @@
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>Welcome to MineWine!</h1>
-                <p>FREE SHIPPING FOR ALL ORDERS OF $100 OR MORE...</p>
+                <p>FREE SHIPPING FOR ALL ORDERS OF $1000 OR MORE...</p>
 				<button class="ghost" id="signUp">Sign Up</button>
 			</div>
 		</div>
@@ -149,4 +161,3 @@
 	});
 
 </script>
-<script src="./scripts/login.js"></script>
