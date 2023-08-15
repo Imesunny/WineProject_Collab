@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+body{
+    font-family: 'Nunito', sans-serif;
+    
+    background-color: #FFF8E9;
+}
+.topBar{
+    display: flex;
+}
+.topBar>h5:nth-child(4){
+    color: gray;
+}
+
+#cont{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    height: 700px;
+    margin: 30px;
+}
+.imgDiv{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 40%;
+}
+.imgDiv>img{
+    width: 30%;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+.smallImg>img{
+   width: 70px;
+   height: 70px;
+   margin-top: 50px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+#side{
+    width: 60%;
+}
+.ratingDiv{
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.ratingDiv>span:nth-child(2){
+    margin-left: 40px;
+}
+.ratingDiv>span:nth-child(3){
+    margin-left: 180px;
+    color: green;
+}
+.ratingDiv>span:nth-child(4){
+    margin-left: 250px;
+    cursor: pointer;
+}
+.ratingDiv>p{
+    color: gray;
+}
+
+.detilsDiv{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 30px 10px 30px;
+    font-size: 15px;
+}
+.detilsDiv>div>p:nth-child(1){
+    color: gray;
+}
+.moreDetails{
+    display: flex;
+    gap: 20px;
+    margin: 0px 30px 10px 30px;
+}
+.moreDetails>img{
+    width: 50%;
+}
+#button1{
+    background-color: #FFF8E9;
+    border: 1px solid gray;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 150px;
+    margin-bottom: 40px;
+    width: 100px;
+}
+#button2{
+    background-color: #FFF8E9;
+    cursor: pointer;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-left: 50px;
+    width: 150px;
+}
+.priceDiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.priceDiv>h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.bname{
+    font-size: 40px;
+    font-family: 'PT Mono', monospace;
+    margin-left: 30px;
+}
+.cart{
+   height: 50px;
+   font-weight: bold;
+   cursor: pointer;
+   color: white;
+   background-color: #BF0D12;
+   border: 0px;
+   width: 150px;
+}
+#Quick{
+    height: 50px;
+   font-weight: bold;
+   cursor: pointer;
+   color: black;
+   background-color: #FFF8E9;
+   border: 1px solid black;
+   width: 150px;
+}
+
+
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  .cart-popup.active {
+    display: block;
+  }
+  
+  .cart-popup h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .cart-popup button {
+    background-color: #BF0D12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .cart-popup button:hover {
+    background-color: #BF0D12;
+  }
+
+
+  .Divdiv{
+    display: flex;
+    justify-content: space-around;
+  }
+  .Divdiv>div:nth-child(1)>img{
+    width: 70px;
+    height: 70px;
+  }
+  .Divdiv>div:nth-child(2)>img{
+    width: 70px;
+    height: 70px;
+  }
+  .Divdiv>div:nth-child(3)>img{
+    width: 70px;
+    height: 70px;
+  }
+  .Divdiv>div:nth-child(4)>img{
+    width: 70px;
+    height: 70px;
+  }
+
+
+.review{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+.rate{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+@media screen and (max-width: 480px) {
+    .imgDiv>img {
+        margin-left: 106px;
+    }
+    .bname {
+        font-size: 24px;
+    }
+    .imgDiv {
+        width: 100%;;
+    }
+    #cont{
+        flex-direction: column;
+        height: auto;
+    }
+    .smallImg {
+        display: flex;
+        justify-content: space-between;
+    }
+    .smallImg img {
+        width: 20%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    #side {
+        width: 100%;;
+    }
+    .detilsDiv {
+        margin: 0px 10px 10px 10px;
+    }
+    .moreDetails {
+        margin: 0px 10px 10px 10px;
+    }
+    #button1 {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 480px) {
+        .imgDiv>img {
+            margin-left: 106px;
+        }
+        .bname {
+            font-size: 24px;
+        }
+        .imgDiv {
+            width: 100%;;
+        }
+        #cont{
+            flex-direction: column;
+            height: auto;
+        }
+        .smallImg {
+            display: flex;
+            justify-content: space-between;
+        }
+        .smallImg img {
+            width: 20%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        #side {
+            width: 100%;;
+        }
+        .detilsDiv {
+            margin: 0px 10px 10px 10px;
+        }
+        .moreDetails {
+            margin: 0px 10px 10px 10px;
+        }
+        #button1 {
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }@media screen and (max-width: 480px) {
+        .imgDiv>img {
+            margin-left: 137px;
+        }
+        .bname {
+            font-size: 24px;
+        }
+        .imgDiv {
+            width: 100%;;
+        }
+        #cont{
+            flex-direction: column;
+            height: auto;
+        }
+        .smallImg {
+            display: flex;
+            justify-content: space-between;
+        }
+        .smallImg img {
+            width: 20%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        #side {
+            width: 100%;;
+        }
+        .detilsDiv {
+            margin: 0px 10px 10px 10px;
+        }
+        .moreDetails {
+            margin: 0px 10px 10px 10px;
+        }
+        #button1 {
+            margin-left: 50px;
+            margin-right: 0;
+        }
+        .Divdiv>div{
+            display: grid;
+            margin: 0px 10px 0px 18px;
+        }
+        .rate {
+            width: 95%;
+        }
+        .review {
+            width: 95%;
+        }
+    }
+}
