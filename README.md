@@ -27,12 +27,13 @@ Welcome to homepage! This homepage is a fusion of HTML, CSS, Bootstrap, and Java
 
 Welcome to the Minewine login page! This is a login and signup page made by a fusion of HTML, CSS and Javascript. This is done using Firebase auth. All the authentication details are saved in a real-time database. The pages are user-friendly and adapt beautifully to screens of all sizes. Together, let's explore the other possibilities!
 
-<img width="1440" alt="Screen Shot 2023-08-15 at 2 29 48 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/8b0372f5-e3a4-4fb1-8b00-71cfef7dc3b3">
+<img width="1129" alt="Screen Shot 2023-08-15 at 4 38 55 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/16ea6756-0bdf-414e-913a-45fe86f3b737">
 
-<img width="1440" alt="Screen Shot 2023-08-15 at 2 30 21 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/fa8095a3-6733-499a-babe-f8e5189d47c7">
+<img width="1440" alt="Screen Shot 2023-08-15 at 4 40 39 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/35eb1dce-1085-4fcb-bb21-40406802054c">
 
-![Uploading Screen Shot 2023-08-15 at 2.32.15 PM.png…]()
+<img width="1440" alt="Screen Shot 2023-08-15 at 4 39 37 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/892540c9-c5fb-4452-9f92-11e0e38815d3">
 
+<img width="1127" alt="Screen Shot 2023-08-15 at 4 39 14 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/68b66658-d95d-4177-9ff7-ed4dd78658b7">
 
 
 **Gaurav Rana:- Product Page/Product description Page**
