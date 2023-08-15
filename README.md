@@ -25,6 +25,16 @@ Welcome to homepage! This homepage is a fusion of HTML, CSS, Bootstrap, and Java
 
 **Saloni Goyal:- Login/Signup Page, responsiveness of product description page**
 
+Welcome to the Minewine login page! This is a login and signup page made by a fusion of HTML, CSS and Javascript. This is done using Firebase auth. All the authentication details are saved in a real-time database. The pages are user-friendly and adapt beautifully to screens of all sizes. Together, let's explore the other possibilities!
+
+<img width="1440" alt="Screen Shot 2023-08-15 at 2 29 48 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/8b0372f5-e3a4-4fb1-8b00-71cfef7dc3b3">
+
+<img width="1440" alt="Screen Shot 2023-08-15 at 2 30 21 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/fa8095a3-6733-499a-babe-f8e5189d47c7">
+
+![Uploading Screen Shot 2023-08-15 at 2.32.15 PM.png…]()
+
+
+
 **Gaurav Rana:- Product Page/Product description Page**
  
 **Sunny Anand:- Cart & Checkout Page**
