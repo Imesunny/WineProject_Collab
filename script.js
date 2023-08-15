@@ -24,8 +24,8 @@ cartItems.forEach(function(item) {
 
     var img = document.createElement("img");
     img.src = item.img_url;
-    img.height = 70; 
-    img.width = 60;  
+    img.height = 80; 
+    img.width = 25;  
     cartItem.appendChild(img);
 
     var details = document.createElement("div");
@@ -40,6 +40,7 @@ cartItems.forEach(function(item) {
     details.appendChild(productPrice);
 
     cartItem.appendChild(details);
+    
 
     var quantityDiv = document.createElement("div");
     quantityDiv.className = "cart-quantity";
@@ -79,7 +80,7 @@ cartItems.forEach(function(item) {
     deleteDiv.className = "cart-delete";
 
     var deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>'
     deleteButton.addEventListener("click", function() {
         cartPage.removeChild(cartItem);
         removeCartItem(cartItem);
@@ -87,7 +88,7 @@ cartItems.forEach(function(item) {
     });
 
     var totalPrice = document.createElement("p");
-    totalPrice.textContent = "Total: $" + item.price;
+    totalPrice.textContent = "$" + item.price;
     totalPrice.className = "total-price";
 
     deleteDiv.appendChild(totalPrice);
@@ -139,6 +140,8 @@ rightAlignedContainer.appendChild(actualSubtotal);
 
 var savedAmount = document.createElement("p");
 savedAmount.textContent = "You saved $1000";
+savedAmount.style.color = "green";
+savedAmount.style.fontSize = "small";
 rightAlignedContainer.appendChild(savedAmount);
 
 ageContainer.appendChild(ageText);
@@ -158,8 +161,12 @@ cartSummary.appendChild(totalItemsElement);
 
 var checkoutButton = document.createElement("button");
 checkoutButton.textContent = "Checkout";
+checkoutButton.className = "checkout-btn";
 checkoutButton.style.backgroundColor = "red";
 checkoutButton.style.color = "white";
+checkoutButton.addEventListener("click", function() {
+    window.location.href = "payment.html"; 
+});
 
 cartPage.appendChild(parentContainer);
 cartPage.appendChild(cartSummary);
@@ -181,15 +188,21 @@ function updateTotalPrice() {
       var cartItem = totalPriceElement.closest(".cart-item");
       var quantityInput = cartItem.querySelector("input");
       var itemPrice = parseFloat(cartItem.querySelector(".cart-item-details p:last-child").textContent.replace("Price: $", ""));
-      totalPriceElement.textContent = "Total: $" + (itemPrice * quantityInput.value).toFixed(2);
+      totalPriceElement.textContent = "$" + (itemPrice * quantityInput.value).toFixed(2);
+      totalPriceElement.style.fontWeight = "bold";
+      totalPriceElement.style.color = "black";
 
       actualTotal += itemPrice * quantityInput.value; 
   });
 
   totalItemsElement.textContent = `SubTotal: (${cartItems.length} items)`;
 
-  actualSubtotal.textContent = "Actual Subtotal $" + actualTotal.toFixed(2); 
+  actualSubtotal.textContent = "$" + actualTotal.toFixed(2); 
+  actualSubtotal.style.fontWeight = "bold";
+  actualSubtotal.style.fontSize = "larger";
   slashedPrice.innerHTML = `Discounted Price: <span class="original-price">$${(actualTotal + 1000).toFixed(2)}</span>`;
+slashedPrice.style.fontSize = "small"; 
+slashedPrice.style.color = "grey";
 }
 // Initial update
 updateTotalPrice();
