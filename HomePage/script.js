@@ -48,11 +48,8 @@ inputBox.onkeyup = (e) => {
 function select(element) {
     let selectData = element.textContent;
     inputBox.value = selectData;
-    icon.onclick = () => {
-        webLink = `https://www.google.com/search?q=${selectData}`;
-        linkTag.setAttribute("href", webLink);
-        linkTag.click();
-    };
+    // Redirect to product.html page with selected data
+    window.location.href = `product.html?search=${encodeURIComponent(selectData)}`;
     searchWrapper.classList.remove("active");
 }
 
@@ -66,3 +63,18 @@ function showSuggestions(list) {
     }
     suggBox.innerHTML = listData;
 }
+
+//
+    const menuButton = document.getElementById("menuButton");
+    const menuContent = document.getElementById("menuContent");
+
+    menuButton.addEventListener("click", () => {
+        menuContent.style.display = menuContent.style.display === "block" ? "none" : "block";
+    });
+
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (event) => {
+        if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+            menuContent.style.display = "none";
+        }
+    });

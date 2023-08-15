@@ -70,6 +70,9 @@ body{
     text-decoration: none;
     color: black;
   }
+  #searchh{
+    width: 100%;
+  }
 
   @media (max-width : 500px){
     #upper_nav > #left{
