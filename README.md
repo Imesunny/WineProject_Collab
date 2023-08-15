@@ -14,10 +14,17 @@ In this project we have tried to make an Online Wine Ecommerce Website And and a
 
 # Role of team members:-
 
-Vipul Girhe:- Landing/HomePage
+**Vipul Girhe : - HomePage/Landing Page!**
 
-Saloni Goyal:- Login/Signup Page, responsiveness of product description page
+Welcome to homepage! This homepage is a fusion of HTML, CSS, Bootstrap, and JavaScript, creating a dynamic digital experience. It's meticulously crafted for responsiveness, ensuring seamless navigation on any device. The navbar and footer are user-friendly and adapt beautifully to screens of all sizes. Let's connect and explore the other possibilities together!
 
-Gaurav Rana:- Product Page/Product description Page
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/212d6abd-55f1-4ce2-9498-03237b6abe64)
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/2ff802a2-bb65-4598-91a4-ff02ada059f7)
+
+
+**Saloni Goyal:- Login/Signup Page, responsiveness of product description page**
+
+**Gaurav Rana:- Product Page/Product description Page**
  
-Sunny Anand:- Cart & Checkout Page
+**Sunny Anand:- Cart & Checkout Page**
