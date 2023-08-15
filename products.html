@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wines</title>
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/Nav.css">
+</head>
+<body>
+
+
+
+  <nav>
+
+    <div id="upper_nav">
+        <div id="left">
+            <h4>UA | EN</h4>
+            <h4>0 800 123 456</h4>    
+        </div>
+        <div id="right">
+            <span><a href="login.html"><i class="fa-solid fa-user"></i></a></span>
+            <span><i class="fa-solid fa-scale-unbalanced"></i></span>
+            <span><a href="like.html"><i class="fa-solid fa-heart"></i></a></span>
+            <span><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></span>
+        </div>
+    </div> 
+    <hr id="hr1">  
+    <div id="lower_nav">
+        
+        <div><h1>Mine Wine</h1></div>
+        
+        <div id="nav_middle" >
+            <h4>RED</h4>
+            <h4>WHITE</h4>
+            <h4>ROSE</h4>
+            <h4>SPARKLING</h4>
+            <h4>PROMOTIONS</h4>
+            <h4>SETS & GIFTS</h4>
+        </div>
+        
+        <div>
+            <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span> -->
+            <div class="wrapper">
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Type to search..">
+                    <div class="autocom-box">
+                    <!-- here list are inserted from javascript -->
+                    </div>
+                    <div class="icon"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr id="hr2"> 
+        
+
+    </nav>
+
+
+
+
+
+  <h1 id="cata">Catalog</h1>
+  <div id="sort">
+    <label for="sorting">Sort by:- </label>
+       <select id="sorting">
+        <option value="">FEATURED</option>
+        <option value="AtoZ">Name A to Z</option>
+        <option value="Z to A">Name Z to A</option>
+        <option value="HtoL">High to Low</option>
+        <option value="LtoH">Low to High</option>
+       </select>
+      
+  </div>
+<div id="main">
+  <div class="filter-panel">
+  <button id="toggleFilters">Toggle Filters ˅</button>
+
+<div id="first">
+<div id="filters">
+    <h2>Filters</h2>
+    <hr>
+    <div id="price"><span >Price</span> <span id="plus">+</span></div>
+    <hr>
+
+</div>
+<div class="cat"><span >Category</span> <span class="minus">-</span></div>
+<div id="wineType">
+
+    <div class="wine-checkbox">
+        <input type="checkbox" id="red-wine">
+        <label for="red-wine">Red Wine</label>
+      </div>
+
+      <div class="wine-checkbox">
+        <input type="checkbox" id="white-wine">
+        <label for="white-wine">White Wine</label>
+      </div>
+
+
+      <div class="wine-checkbox">
+        <input type="checkbox" id="sparkling-wine">
+        <label for="sparkling-wine">Sparkling Wine</label>
+      </div>
+
+      <div class="wine-checkbox">
+        <input type="checkbox" id="rose-wine">
+        <label for="rose-wine">Rose Wine</label>
+      </div>
+
+</div>
+<hr>
+<div class="cat"><span >Rating</span> <span id="min">-</span></div>
+<div id="star">
+  
+    <div class="wine-checkbox">
+        <input type="checkbox" id="five-stars">
+        <label for="five-stars">⭐⭐⭐⭐⭐</label>
+      </div>
+
+      <div class="wine-checkbox">
+        <input  type="checkbox" id="four-stars">
+        <label for="four-stars">⭐⭐⭐⭐</label>
+      </div>
+
+
+      <div class="wine-checkbox">
+        <input placeholder="i" type="checkbox" id="three-stars">
+        <label for="three-stars">⭐⭐⭐</label>
+      </div>
+</div>
+<hr>
+<div class="cat"><span>Country Of Origin</span> <span id="minuss">-</span></div>
+<div id="country">
+
+  <div class="wine-checkbox">
+    <input type="checkbox" id="Italy">
+    <label for="Italy">Italy</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="California">
+    <label for="California">California</label>
+  </div>
+
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="Spain">
+    <label for="Spain">Spain</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="France">
+    <label for="France">France</label>
+  </div>
+
+  <div class="wine-checkbox">
+    <input  type="checkbox" id="Portugal">
+    <label for="Portugal">Portugal</label>
+  </div>
+</div>
+
+</div>
+</div>
+
+    <div id="wines">
+         
+    </div>
+
+</div>
+<div id="pagination"></div>
+
+<hr>
+
+<div id="container_7">
+  <div>
+      <h4>CATALOG</h4>
+      <p>Red wine</p>
+      <p>White wine</p>
+      <p>Rose wine</p>
+      <p>Sparkling wine</p>
+      <p>Promotions</p>
+      <p>Sets and Gifts</p>
+  </div>
+  <div>
+      <h4>SUPPORT</h4>
+      <p>FAQ</p>
+      <p><a href="">Terms of use</a></p>
+      <p><a href="">Privacy Policy</a></p>
+      <p>Delivery and payment</p>
+      <p>Return and exchange</p>
+  </div>
+  <div>
+      <h4>OUR COMPANY</h4>
+      <p><a href="">About us</a></p>
+      <p>Contact us</p>
+      <p>Reviews</p>
+      <p>Blog and news</p>
+      <p>Loyalty program</p>
+      <p>Wine subscription</p>
+  </div>
+  <div>
+      <h4>CONTACT</h4>
+      <p>0 800 123 456</p>
+      <p>info@minewine.com</p>
+      
+      <h4>ADDRESS :</h4>
+      <p>Ukraine</p>
+      <p>kyiv,Bazhana St,17</p>
+      
+      <h4>WORKING HOURS :</h4>
+      <p>Mon-Fri 09:00-20:00</p>
+      <p>Sat-Sun 10:00-18:00</p>
+      <p><i class="fa-brands fa-instagram icon"></i> <i class="fa-brands fa-telegram icon"></i></p>
+  </div>
+  <div>
+      <h4>Subscribe to our newsletter</h4>
+      <p>And get -20% on you first order</p>
+      <input id="input_email" type="email" placeholder="example@gmail.com">
+      <button>subscribe</button>
+  </div>
+</div>
+<hr>
+<div id="bottom_footer">
+  <h1>Mine Vine</h1>
+  <div>
+      <p>We only sell Alcohol to Adults 21+</p>
+      <p>@MineVine 2023. All Rights Reserved</p>
+  </div>
+</div>
+
+
+</body>
+</html>
+<script src="script/products.js"></script>
