@@ -36,6 +36,22 @@ Welcome to the Minewine login page! This is a login and signup page made by a fu
 <img width="1127" alt="Screen Shot 2023-08-15 at 4 39 14 PM" src="https://github.com/Imesunny/WineProject_Collab/assets/135959900/68b66658-d95d-4177-9ff7-ed4dd78658b7">
 
 
+
 **Gaurav Rana:- Product Page/Product description Page**
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/5960034c-50bb-49d9-84f8-63aa735713cb)
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/35d38773-4c93-404d-b078-3ead5a98305c)
+
+
  
 **Sunny Anand:- Cart & Checkout Page**
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/c67815e2-d520-45d7-a119-4c9607f56535)
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/299ca604-802c-43d7-8093-056da33df92e)
+
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/5ef76943-7c42-44f6-a7aa-f4a6c17b1356)
+
+
+
