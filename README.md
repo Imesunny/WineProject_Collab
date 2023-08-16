@@ -57,5 +57,8 @@ Welcome to your Cart Page, where your carefully selected items await their journ
 
 ![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/5ef76943-7c42-44f6-a7aa-f4a6c17b1356)
 
+![image](https://github.com/Imesunny/WineProject_Collab/assets/131906819/9103e1c6-1fd5-4969-9c27-be2698dff781)
+
+
 
 
